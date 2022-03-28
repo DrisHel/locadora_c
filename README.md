@@ -5,4 +5,4 @@ System to manage a DVD rental company, performs the registration of Customer, DV
 :white_check_mark:
 
 
-	:neckbeard: Doris Nunes
+:neckbeard: Doris Nunes
