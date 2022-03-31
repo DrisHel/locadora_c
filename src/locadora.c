@@ -10,6 +10,16 @@ typedef struct cliente
 
 }Cliente;
 
+typedef struct dvd
+{
+    int cod;
+    char titulo[15];
+    int ano_lancamento;
+    int status;
+    int valor;
+
+}Dvd;
+
 int cadastrarCliente(Cliente *vetor_clientes[], int n_elementos, int cod, char nome[],char telefone[]){
     Cliente *novo = (Cliente *)malloc(sizeof(Cliente));    
     for(int i=0;i<n_elementos;i++){
@@ -24,50 +34,19 @@ int cadastrarCliente(Cliente *vetor_clientes[], int n_elementos, int cod, char n
     return 0;
 }
 
+
+
 void mostraClientes(Cliente **vetor_clientes, int n_elementos){
   Cliente *aux = NULL;
   for(int i=0;i<n_elementos;i++){
       if(vetor_clientes[i] != NULL){
         aux = vetor_clientes[i];
         printf("\n ***********************************\n");
-        printf("\tCliente: %s \n",aux->nome);
         printf("\tCodigo: %d  \n",aux->cod);
+        printf("\tCliente: %s \n",aux->nome);
         printf("\tTelefone: %s \n",aux->telefone);
         
       }
   }
 }
 
-
-
-/* typedef struct dvd
-{
-    int cod;
-    char titulo[20];
-    int ano_lancamento;
-    int status;
-    double valor;
-
-}Dvd; */
-
-/* typedef struct locacao
-{
-    int cod;
-    Cliente *cliente;
-    Dvd *dvd;
-    Data locacao, devolucao;
-    double totalLocacao;
-
-}Locacao; */
-
-
-/* Locacao emprestimo(Cliente *cliente,Dvd *dvd, Data *locacao, Data *devolucao){
- Locacao l;
- 
-return l;
-}
-
-
-void imprimeLocacao(){
-
-}; */
